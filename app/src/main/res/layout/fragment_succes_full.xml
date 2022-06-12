@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/buttontab_backgraund"
             android:fontFamily="@font/nunito_sans"
-            android:text="Вернуться"
+            android:text="Войти"
             android:textAllCaps="false"
             android:textSize="20sp"
             android:textStyle="bold"

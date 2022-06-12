@@ -21,7 +21,7 @@ class SuccesFullFragment : Fragment() {
         val view =  inflater.inflate(R.layout.fragment_succes_full, container, false)
 
         view.btn_restore_success_full.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_succesFullFragment_to_authorizationFragment)
+            Navigation.findNavController(view).navigate(R.id.action_succesFullFragment_to_homeFragment)
         }
         return view
     }

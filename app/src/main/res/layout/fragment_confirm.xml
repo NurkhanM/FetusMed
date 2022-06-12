@@ -78,7 +78,7 @@
             android:fontFamily="@font/nunito_sans"
             android:gravity="center"
             android:text="Мы отправили код подтверждения \n на адрес    ******@ma**.**"
-            android:textColor="@color/black_txt2"
+            android:textColor="@color/black_txt3"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -111,6 +111,7 @@
 
 
             <EditText
+                android:id="@+id/edt_confirm1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -124,6 +125,7 @@
                 android:textSize="24sp" />
 
             <EditText
+                android:id="@+id/edt_confirm2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -137,6 +139,7 @@
                 android:textSize="24sp" />
 
             <EditText
+                android:id="@+id/edt_confirm3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -150,6 +153,7 @@
                 android:textSize="24sp" />
 
             <EditText
+                android:id="@+id/edt_confirm4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -187,7 +191,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_restore_confirm">
@@ -196,7 +202,6 @@
                 android:id="@+id/txt_center_aut_title5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/nunito_sans"
                 android:gravity="center"
                 android:text="Получить новый код можно"
@@ -219,6 +224,7 @@
             android:id="@+id/status_restore2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:visibility="gone"
@@ -230,7 +236,6 @@
                 android:id="@+id/txt_center_aut_title7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/nunito_sans"
                 android:gravity="center"
                 android:text="Не получили код?"
@@ -242,7 +247,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/nunito_sans"
                 android:gravity="center"
                 android:text="Получите новый."
