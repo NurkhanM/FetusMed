@@ -12,11 +12,54 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_authorizationFragment"
-            app:destination="@id/authorizationFragment" />
+            app:destination="@id/authorizationFragment"
+            app:popUpTo="@+id/splashFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/authorizationFragment"
         android:name="com.example.fetusmed.windows.authorization.AuthorizationFragment"
         android:label="fragment_authorization"
-        tools:layout="@layout/fragment_authorization" />
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorizationFragment_to_restoreFragment"
+            app:destination="@id/restoreFragment" />
+        <action
+            android:id="@+id/action_authorizationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restoreFragment"
+        android:name="com.example.fetusmed.windows.authorization.restore.RestoreFragment"
+        android:label="fragment_restore"
+        tools:layout="@layout/fragment_restore" >
+        <action
+            android:id="@+id/action_restoreFragment_to_confirmFragment"
+            app:destination="@id/confirmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="com.example.fetusmed.windows.authorization.confirm.ConfirmFragment"
+        android:label="fragment_confirm"
+        tools:layout="@layout/fragment_confirm" >
+        <action
+            android:id="@+id/action_confirmFragment_to_succesFullFragment"
+            app:destination="@id/succesFullFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/succesFullFragment"
+        android:name="com.example.fetusmed.windows.authorization.succesfull.SuccesFullFragment"
+        android:label="fragment_succes_full"
+        tools:layout="@layout/fragment_succes_full" >
+        <action
+            android:id="@+id/action_succesFullFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment"
+            app:popUpTo="@+id/succesFullFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fetusmed.windows.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>

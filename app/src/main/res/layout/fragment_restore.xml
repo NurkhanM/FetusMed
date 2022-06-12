@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".windows.authorization.AuthorizationFragment">
-
+    tools:context=".windows.authorization.restore.RestoreFragment">
 
     <LinearLayout
         android:id="@+id/txtTitleAuth"
@@ -50,13 +49,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_sans"
-            android:text="Авторизация"
+            android:text="Восстановление пароля"
             android:textColor="@color/black_txt"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_center_aut_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Получите код подтверждения"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_center_aut_title" />
+
+        <TextView
+            android:id="@+id/txt_center_aut_title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito_sans"
+            android:gravity="center"
+            android:text="Чтобы получить код \n подтверждения, введите адрес\n электронной почты"
+            android:textColor="@color/black_txt3"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_center_aut_title2" />
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -65,6 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/round_edges"
@@ -74,9 +101,9 @@
             app:boxStrokeWidthFocused="0dp"
             app:endIconMode="clear_text"
             app:hintEnabled="false"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_center_aut_title3">
 
 
             <com.google.android.material.textfield.TextInputEditText
@@ -93,74 +120,43 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout2"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/round_edges"
-            android:scaleY="0.9"
-            android:textColorHint="@color/black_txt2"
-            app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
-            app:endIconMode="password_toggle"
-            app:hintEnabled="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/authEditPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_sans"
-                android:hint="Пароль"
-                android:inputType="textPassword"
-                android:maxLength="18"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_auth"
+            android:id="@+id/btn_restore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:background="@drawable/buttontab_backgraund"
             android:fontFamily="@font/nunito_sans"
-            android:text="Войти"
+            android:text="Запросить"
             android:textAllCaps="false"
             android:textSize="20sp"
             android:textStyle="bold"
             app:backgroundTint="@null"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
             tools:layout_editor_absoluteX="42dp" />
 
-        <TextView
-            android:id="@+id/txt_restore_auth"
-            android:layout_width="wrap_content"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_restore_cancel"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_edges"
             android:fontFamily="@font/nunito_sans"
-            android:text="Забыли пароль?"
-            android:textColor="@color/text_color"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_auth" />
+            android:text="Назад"
+            android:textAllCaps="false"
+            android:textColor="@color/fon"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@+id/btn_restore"
+            tools:layout_editor_absoluteX="42dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

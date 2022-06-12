@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
 import com.example.fetusmed.R
 import kotlinx.coroutines.CoroutineScope
@@ -25,6 +26,7 @@ class SplashFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_splash, container, false)
 
+        (activity as AppCompatActivity).window.statusBarColor = ContextCompat.getColor(requireContext(),R.color.fon);
         // Метод для показа полно экранного режима
         fullScreen()
 
@@ -32,6 +34,7 @@ class SplashFragment : Fragment() {
         CoroutineScope(Dispatchers.Main).launch {
             delay(2000)
             Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_authorizationFragment)
+            (activity as AppCompatActivity).window.statusBarColor = ContextCompat.getColor(requireContext(),R.color.white)
         }
 
         return view
