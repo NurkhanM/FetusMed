@@ -27,17 +27,17 @@ class AuthorizationFragment : Fragment() {
         val view =  inflater.inflate(R.layout.fragment_authorization, container, false)
 
         view.btn_auth.setOnClickListener {
-            if (view.authEditEmail.text?.trim()?.length != 0 && view.authEditPassword.text?.trim()?.length != 0){
-                if (view.authEditEmail.text.toString() == "admin@mail.ru" &&
-                    view.authEditPassword.text.toString() == "123456"){
-                    Toast.makeText(requireContext(), "Добро пожаловать!", Toast.LENGTH_SHORT).show()
+//            if (view.authEditEmail.text?.trim()?.length != 0 && view.authEditPassword.text?.trim()?.length != 0){
+//                if (view.authEditEmail.text.toString() == "admin@mail.ru" &&
+//                    view.authEditPassword.text.toString() == "123456"){
+//                    Toast.makeText(requireContext(), "Добро пожаловать!", Toast.LENGTH_SHORT).show()
                     Navigation.findNavController(view).navigate(R.id.action_authorizationFragment_to_homeFragment)
-                }else{
-                    Toast.makeText(requireContext(), "Неправильный \n Логин или Пароль!", Toast.LENGTH_SHORT).show()
-                }
-            } else {
-                Toast.makeText(requireContext(), "Заполните все поля", Toast.LENGTH_SHORT).show()
-            }
+//                }else{
+//                    Toast.makeText(requireContext(), "Неправильный \n Логин или Пароль!", Toast.LENGTH_SHORT).show()
+//                }
+//            } else {
+//                Toast.makeText(requireContext(), "Заполните все поля", Toast.LENGTH_SHORT).show()
+//            }
 
         }
 
