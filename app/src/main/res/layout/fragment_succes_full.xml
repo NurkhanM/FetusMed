@@ -47,18 +47,33 @@
 
 
         <TextView
-            android:id="@+id/txt_success_full"
+            android:id="@+id/txt_success_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
             android:fontFamily="@font/nunito_sans"
             android:gravity="center"
-            android:text="Ваш номер телефона \n успешно подтвержден"
-            android:textColor="@color/fon"
-            android:textSize="16sp"
+            android:text="Ваш пароль был успешно изменен!"
+            android:textColor="@color/black_txt"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_success_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:fontFamily="@font/nunito_sans"
+            android:gravity="center"
+            android:text="Ваш пароль был успешно изменен. Пожалуйста, используйте ваш новый пароль для доступа к FetusMed приложения."
+            android:textColor="@color/fon"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_success_title" />
 
         <ImageView
             android:layout_width="37dp"
@@ -72,12 +87,12 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_restore_success_full"
-            android:layout_marginBottom="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
             android:background="@drawable/buttontab_backgraund"
             android:fontFamily="@font/nunito_sans"
-            android:text="Войти"
+            android:text="Продолжить"
             android:textAllCaps="false"
             android:textSize="20sp"
             android:textStyle="bold"

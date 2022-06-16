@@ -2,4 +2,8 @@
     <string name="app_name">FetusMed</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="myAlphaNumeric">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="confirm_text_5">Получить новый код можно</string>
+    <string name="confirm_text_6">через 120 секунд</string>
+    <string name="dialog_text_new_password_title">Вы уверены что хотите отменить,\n все данные будут потеряны</string>
 </resources>

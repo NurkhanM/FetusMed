@@ -19,10 +19,15 @@ class RestoreFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_restore, container, false)
-
+        fun String.isValidEmail() = isNotEmpty() && android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
         view.btn_restore.setOnClickListener {
-            if (view.authEditEmailRestore.text?.trim()?.isNotEmpty() == true){
-                Navigation.findNavController(view).navigate(R.id.action_restoreFragment_to_confirmFragment)
+            if (view.restoreEditEmailRestore.text?.trim()?.isNotEmpty() == true ){
+                if (view.restoreEditEmailRestore.text.toString().isValidEmail()){
+                    val sendData = RestoreFragmentDirections.actionRestoreFragmentToConfirmFragment(view.restoreEditEmailRestore.text.toString())
+                    Navigation.findNavController(view).navigate(sendData)
+                }else{
+                    Toast.makeText(requireContext(), "Введите почтовый адресс!", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(requireContext(), "Заполните поле!", Toast.LENGTH_SHORT).show()
             }

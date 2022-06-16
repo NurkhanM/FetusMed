@@ -44,10 +44,12 @@
         android:name="com.example.fetusmed.windows.authorization.confirm.ConfirmFragment"
         android:label="fragment_confirm"
         tools:layout="@layout/fragment_confirm" >
+        <argument
+            android:name="email"
+            app:argType="string" />
         <action
-            android:id="@+id/action_confirmFragment_to_succesFullFragment"
-            app:destination="@id/succesFullFragment"
-           />
+            android:id="@+id/action_confirmFragment_to_newPasswordFragment"
+            app:destination="@id/newPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/succesFullFragment"
@@ -65,4 +67,18 @@
         android:name="com.example.fetusmed.windows.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.example.fetusmed.windows.authorization.newPassword.NewPasswordFragment"
+        android:label="fragment_new_password"
+        tools:layout="@layout/fragment_new_password" >
+        <action
+            android:id="@+id/action_newPasswordFragment_to_succesFullFragment"
+            app:destination="@id/succesFullFragment" />
+        <action
+            android:id="@+id/action_newPasswordFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment"
+            app:popUpTo="@+id/authorizationFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
 </navigation>

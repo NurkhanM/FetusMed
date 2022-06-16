@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.fetusmed.R
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import java.text.DateFormat
@@ -21,8 +24,9 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-
-        root.calendarView.setOnDateChangeListener { calendarView, i, i2, i3 ->
+        (activity as AppCompatActivity).window.statusBarColor = ContextCompat.getColor(requireContext(),R.color.fon)
+        (activity as AppCompatActivity).window.decorView.windowInsetsController?.setSystemBarsAppearance(0, APPEARANCE_LIGHT_STATUS_BARS);
+        root.calendarView.setOnDateChangeListener { _, i, i2, i3 ->
             Toast.makeText(requireContext(), "Data : $i3.$i2.$i", Toast.LENGTH_SHORT).show()
         }
 
