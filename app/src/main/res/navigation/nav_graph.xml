@@ -57,8 +57,8 @@
         android:label="fragment_succes_full"
         tools:layout="@layout/fragment_succes_full" >
         <action
-            android:id="@+id/action_succesFullFragment_to_homeFragment"
-            app:destination="@id/homeFragment"
+            android:id="@+id/action_succesFullFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment"
             app:popUpTo="@+id/authorizationFragment"
             app:popUpToInclusive="true"/>
     </fragment>

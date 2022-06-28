@@ -47,6 +47,4 @@ class AuthorizationFragment : Fragment() {
 
         return view
     }
-
-
 }
